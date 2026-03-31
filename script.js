@@ -1,49 +1,41 @@
-// ================= SELECT ELEMENTS =================
+// ================= GSAP SETUP =================
+gsap.registerPlugin(ScrollTrigger);
+
+// ================= ELEMENTS =================
 const hamburger = document.getElementById("hamburger");
 const sideMenu = document.getElementById("side-menu");
 const overlay = document.getElementById("overlay");
 const menuItems = document.querySelectorAll(".side-menu li");
 
 // ================= INITIAL STATE =================
-// Place menu off-screen (left)
+// Move menu off-screen
 gsap.set(sideMenu, { x: "-100%" });
 
-// Track whether menu is open or closed
 let menuOpen = false;
 
-// ================= EVENT LISTENERS =================
-
-// Toggle menu when hamburger clicked
+// ================= NAV MENU =================
 hamburger.addEventListener("click", () => {
-    if (!menuOpen) {
-        openMenu();
-    } else {
-        closeMenu();
-    }
+    menuOpen ? closeMenu() : openMenu();
 });
 
-// Close menu when overlay clicked
 overlay.addEventListener("click", closeMenu);
 
-// ================= OPEN MENU =================
+// Open menu
 function openMenu() {
     menuOpen = true;
 
-    // Slide menu in
     gsap.to(sideMenu, {
         x: "0%",
         duration: 0.5,
         ease: "power4.out"
     });
 
-    // Fade in overlay
     gsap.to(overlay, {
         opacity: 1,
         pointerEvents: "all",
         duration: 0.3
     });
 
-    // Animate menu items one by one (stagger)
     gsap.from(menuItems, {
         x: -30,
         opacity: 0,
@@ -52,28 +44,122 @@ function openMenu() {
         delay: 0.2
     });
 
-    // Disable background scrolling
     document.body.classList.add("no-scroll");
 }
 
-// ================= CLOSE MENU =================
+// Close menu
 function closeMenu() {
     menuOpen = false;
 
-    // Slide menu out
     gsap.to(sideMenu, {
         x: "-100%",
         duration: 0.4,
         ease: "power3.in"
     });
 
-    // Fade out overlay
     gsap.to(overlay, {
         opacity: 0,
         pointerEvents: "none",
         duration: 0.3
     });
 
-    // Re-enable scrolling
     document.body.classList.remove("no-scroll");
 }
+
+// ================= HERO LOAD ANIMATION =================
+gsap.from(".hero h1", { opacity: 0, y: 40, duration: 1 });
+gsap.from(".hero p", { opacity: 0, y: 30, delay: 0.2 });
+gsap.from(".hero .btn", { opacity: 0, y: 20, delay: 0.4 });
+
+// ================= SCROLL ANIMATIONS =================
+
+// Features header
+gsap.from(".section-header", {
+    scrollTrigger: {
+        trigger: ".features",
+        start: "top 80%"
+    },
+    opacity: 0,
+    y: 40
+});
+
+// Cards stagger
+gsap.from(".card", {
+    scrollTrigger: {
+        trigger: ".feature-grid",
+        start: "top 80%"
+    },
+    opacity: 0,
+    y: 50,
+    stagger: 0.2
+});
+
+// CTA
+gsap.from(".cta", {
+    scrollTrigger: {
+        trigger: ".cta",
+        start: "top 85%"
+    },
+    opacity: 0,
+    y: 50
+});
+
+// Footer
+gsap.from(".footer", {
+    scrollTrigger: {
+        trigger: ".footer",
+        start: "top 95%"
+    },
+    opacity: 0,
+    y: 30
+});
+
+// ================= PARALLAX =================
+
+// Background moves slower than scroll
+gsap.to(".hero-bg", {
+    y: "20%",
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+    }
+});
+
+// Floating shapes move differently
+gsap.to(".shape-1", {
+    y: 100,
+    x: 50,
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+    }
+});
+
+gsap.to(".shape-2", {
+    y: -80,
+    x: -40,
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+    }
+});
+
+// Cards subtle parallax
+gsap.utils.toArray(".card").forEach((card, i) => {
+    gsap.to(card, {
+        y: i % 2 === 0 ? 30 : -30,
+        scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            end: "bottom 10%",
+            scrub: true
+        }
+    });
+});

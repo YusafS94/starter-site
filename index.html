@@ -2,38 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Makes site responsive on mobile -->
+    <!-- Enables responsive scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Landing Page Boilerplate</title>
+    <title>GSAP Parallax Landing Page</title>
 
-    <!-- Link to CSS -->
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- GSAP animation library -->
+    <!-- GSAP Core -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger (for scroll animations) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <!-- ================= HEADER / NAVBAR ================= -->
+    <!-- ================= HEADER / NAV ================= -->
     <header class="header">
       <div class="container nav">
-        <!-- Logo / Brand -->
+        <!-- Logo -->
         <div class="logo">LOGO</div>
 
-        <!-- DESKTOP NAVIGATION (hidden on mobile, shown on desktop) -->
+        <!-- Desktop Navigation (hidden on mobile) -->
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
 
-        <!-- MOBILE HAMBURGER BUTTON (shown on mobile only) -->
+        <!-- Hamburger Button (mobile only) -->
         <button class="hamburger" id="hamburger">☰</button>
       </div>
     </header>
 
     <!-- ================= MOBILE SIDE MENU ================= -->
-    <!-- This slides in from the left when hamburger is clicked -->
+    <!-- Slides in from left -->
     <ul class="side-menu" id="side-menu">
       <li><a href="#">Home</a></li>
       <li><a href="#">Features</a></li>
@@ -41,51 +44,59 @@
     </ul>
 
     <!-- ================= OVERLAY ================= -->
-    <!-- Dark background that appears behind the menu -->
+    <!-- Dark background behind menu -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- ================= HERO (PARALLAX) ================= -->
     <section class="hero">
-      <div class="container">
+      <!-- Background layer (moves slower = parallax effect) -->
+      <div class="hero-bg"></div>
+
+      <!-- Main content -->
+      <div class="container hero-content">
         <h1>Build Better Websites Faster</h1>
-        <p>A clean starting point for your next project.</p>
+        <p>A clean GSAP-powered boilerplate.</p>
         <button class="btn">Get Started</button>
       </div>
+
+      <!-- Floating decorative shapes -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
     </section>
 
-    <!-- ================= FEATURES SECTION ================= -->
+    <!-- ================= FEATURES ================= -->
     <section class="features">
       <div class="container">
         <!-- Section heading -->
         <div class="section-header">
           <h2>Features</h2>
-          <p>Everything you need to get started quickly.</p>
+          <p>Everything you need to get started.</p>
         </div>
 
-        <!-- Grid of feature cards -->
+        <!-- Feature cards -->
         <div class="feature-grid">
           <div class="card">
             <img src="https://via.placeholder.com/300x200" alt="" />
             <h3>Fast Setup</h3>
-            <p>Get your project running in minutes.</p>
+            <p>Launch projects quickly.</p>
           </div>
 
           <div class="card">
             <img src="https://via.placeholder.com/300x200" alt="" />
             <h3>Responsive</h3>
-            <p>Mobile-first design that scales to desktop.</p>
+            <p>Mobile-first design.</p>
           </div>
 
           <div class="card">
             <img src="https://via.placeholder.com/300x200" alt="" />
             <h3>Modern UI</h3>
-            <p>Clean layout with smooth interactions.</p>
+            <p>Smooth animations.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= CTA SECTION ================= -->
+    <!-- ================= CTA ================= -->
     <section class="cta">
       <div class="container">
         <h2>Ready to build something great?</h2>
@@ -97,11 +108,11 @@
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
       <div class="container">
-        <p>© 2026 Your Name. All rights reserved.</p>
+        <p>© 2026 Your Name</p>
       </div>
     </footer>
 
-    <!-- Link to JS -->
+    <!-- JS -->
     <script src="script.js"></script>
   </body>
 </html>
