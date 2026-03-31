@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes site responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Landing Page Boilerplate</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GSAP animation library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header">
+      <div class="container nav">
+        <!-- Logo / Brand -->
+        <div class="logo">LOGO</div>
+
+        <!-- DESKTOP NAVIGATION (hidden on mobile, shown on desktop) -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- MOBILE HAMBURGER BUTTON (shown on mobile only) -->
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </header>
+
+    <!-- ================= MOBILE SIDE MENU ================= -->
+    <!-- This slides in from the left when hamburger is clicked -->
+    <ul class="side-menu" id="side-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- ================= OVERLAY ================= -->
+    <!-- Dark background that appears behind the menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <div class="container">
+        <h1>Build Better Websites Faster</h1>
+        <p>A clean starting point for your next project.</p>
+        <button class="btn">Get Started</button>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES SECTION ================= -->
+    <section class="features">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="section-header">
+          <h2>Features</h2>
+          <p>Everything you need to get started quickly.</p>
+        </div>
+
+        <!-- Grid of feature cards -->
+        <div class="feature-grid">
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="" />
+            <h3>Fast Setup</h3>
+            <p>Get your project running in minutes.</p>
+          </div>
+
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="" />
+            <h3>Responsive</h3>
+            <p>Mobile-first design that scales to desktop.</p>
+          </div>
+
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="" />
+            <h3>Modern UI</h3>
+            <p>Clean layout with smooth interactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to build something great?</h2>
+        <p>Start your next project today.</p>
+        <button class="btn">Start Now</button>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
