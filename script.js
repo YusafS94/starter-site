@@ -105,13 +105,14 @@ gsap.from(".cta", {
 });
 
 // Footer
-gsap.from(".footer", {
+gsap.from(".footer-col, .footer-brand", {
     scrollTrigger: {
         trigger: ".footer",
-        start: "top 95%"
+        start: "top 90%"
     },
     opacity: 0,
-    y: 30
+    y: 30,
+    stagger: 0.2
 });
 
 // ================= PARALLAX =================
