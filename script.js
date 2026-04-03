@@ -156,6 +156,8 @@ gsap.to(".shape-2", {
 gsap.utils.toArray(".card").forEach((card, i) => {
     gsap.to(card, {
         y: i % 2 === 0 ? 30 : -30,
+        x: i % 2 === 0 ? 15 : -75,
+        ease: "none",
         scrollTrigger: {
             trigger: card,
             start: "top 90%",
@@ -163,4 +165,18 @@ gsap.utils.toArray(".card").forEach((card, i) => {
             scrub: true
         }
     });
+});
+
+/* ================= COLOR PICKER ================= */
+const colorPicker = document.getElementById("colorPicker");
+const accents = document.querySelectorAll(".accent");
+colorPicker.addEventListener("input", (e) => {
+    const color = e.target.value;
+    accents.forEach((accent) => {
+        accent.style.backgroundColor = color;
+    });
+});
+
+accents.forEach((accent) => {
+    accent.style.borderRadius = "4px";
 });

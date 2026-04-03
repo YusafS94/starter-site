@@ -47,6 +47,11 @@
     <!-- Dark background behind menu -->
     <div class="overlay" id="overlay"></div>
 
+    <!-- ================= COLOR PICKER ================= -->
+    <form class="color-picker-form" action="" method="get">
+      <input type="color" name="color" id="colorPicker" value="#ff0000" />
+    </form>
+
     <!-- ================= HERO (PARALLAX) ================= -->
     <section class="hero">
       <!-- Background layer (moves slower = parallax effect) -->
@@ -56,7 +61,7 @@
       <div class="container hero-content">
         <h1>Build Better Websites Faster</h1>
         <p>A clean GSAP-powered boilerplate.</p>
-        <button class="btn">Get Started</button>
+        <button class="btn accent" id="ctaBtn">Get Started</button>
       </div>
 
       <!-- Floating decorative shapes -->
@@ -101,7 +106,7 @@
       <div class="container">
         <h2>Ready to build something great?</h2>
         <p>Start your next project today.</p>
-        <button class="btn">Start Now</button>
+        <button class="btn accent">Start Now</button>
       </div>
     </section>
 

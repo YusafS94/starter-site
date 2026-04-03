@@ -99,6 +99,14 @@ body {
   z-index: 900;
 }
 
+/* ================= COLOR PICKER ================= */
+.color-picker-form {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
 /* ================= HERO (PARALLAX) ================= */
 .hero {
   position: relative;
@@ -155,8 +163,8 @@ body {
   margin-top: 20px;
   padding: 12px 25px;
   border: none;
-  background: black;
-  color: white;
+  background: greenyellow;
+  color: black;
 }
 
 /* ================= FEATURES ================= */
