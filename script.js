@@ -175,9 +175,18 @@ gsap.utils.toArray(".card").forEach((card, i) => {
 */
 
 /* ================= COLOR PICKER ================= */
-const colorPicker = document.getElementById("colorPicker");
-const accents = document.querySelectorAll(".accent");
-colorPicker.addEventListener("input", (e) => {
+const primaryColorPicker = document.getElementById("primaryColorPicker");
+const accentColorPicker = document.getElementById("accentColorPicker");
+const accents = document.querySelectorAll(".accent-color");
+const primaryElements = document.querySelectorAll(".primary-color");
+primaryColorPicker.addEventListener("input", (e) => {
+    const color = e.target.value;
+    primaryElements.forEach((primary) => {
+        primary.style.backgroundColor = color;
+    });
+});
+
+accentColorPicker.addEventListener("input", (e) => {
     const color = e.target.value;
     accents.forEach((accent) => {
         accent.style.backgroundColor = color;

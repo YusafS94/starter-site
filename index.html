@@ -16,25 +16,22 @@
     <!-- GSAP ScrollTrigger (for scroll animations) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </head>
-  <body>
+  <body class="primary-color">
     <!-- ================= HEADER / NAV ================= -->
     <header class="header">
       <div class="container nav">
         <!-- Logo -->
         <div class="logo">LOGO</div>
-
         <!-- Desktop Navigation (hidden on mobile) -->
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-
         <!-- Hamburger Button (mobile only) -->
         <button class="hamburger" id="hamburger">☰</button>
       </div>
     </header>
-
     <!-- ================= MOBILE SIDE MENU ================= -->
     <!-- Slides in from left -->
     <ul class="side-menu" id="side-menu">
@@ -42,122 +39,128 @@
       <li><a href="#">Features</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
+    <main>
+      <!-- ================= OVERLAY ================= -->
+      <!-- Dark background behind menu -->
+      <div class="overlay" id="overlay"></div>
 
-    <!-- ================= OVERLAY ================= -->
-    <!-- Dark background behind menu -->
-    <div class="overlay" id="overlay"></div>
-
+      <!-- ================= HERO (PARALLAX) ================= -->
+      <section class="hero">
+        <!-- Background layer (moves slower = parallax effect) -->
+        <div class="hero-bg"></div>
+        <!-- Main content -->
+        <div class="container hero-content">
+          <h1>Build Better Websites Faster</h1>
+          <p>A clean GSAP-powered boilerplate.</p>
+          <button class="btn accent-color" id="ctaBtn">Get Started</button>
+        </div>
+        <!-- Floating decorative shapes -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+      </section>
+      <!-- ================= FEATURES ================= -->
+      <section class="features">
+        <div class="container">
+          <!-- Section heading -->
+          <div class="section-header">
+            <h2>Features</h2>
+            <p>Everything you need to get started.</p>
+          </div>
+          <!-- Feature cards -->
+          <div class="feature-grid">
+            <div class="card">
+              <img class="card-image" src="./images/test1.jpg" alt="" />
+              <h3>Fast Setup</h3>
+              <p>Launch projects quickly.</p>
+            </div>
+            <div class="card">
+              <img class="card-image" src="./images/test1.jpg" alt="" />
+              <h3>Responsive</h3>
+              <p>Mobile-first design.</p>
+            </div>
+            <div class="card">
+              <img class="card-image" src="./images/test1.jpg" alt="" />
+              <h3>Modern UI</h3>
+              <p>Smooth animations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ================= CTA ================= -->
+      <section class="cta">
+        <div class="container">
+          <h2>Ready to build something great?</h2>
+          <p>Start your next project today.</p>
+          <button class="btn accent-color">Start Now</button>
+        </div>
+      </section>
+      <!-- ================= FOOTER ================= -->
+      <footer class="footer">
+        <div class="container footer-grid">
+          <!-- LOGO / BRAND -->
+          <div class="footer-brand">
+            <div class="footer-logo">LOGO</div>
+            <p>
+              Building modern, high-performance websites with clean design and
+              smooth interactions.
+            </p>
+          </div>
+          <!-- COLUMN 1 -->
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <!-- COLUMN 2 -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">SEO</a></li>
+            </ul>
+          </div>
+          <!-- COLUMN 3 -->
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p>© 2026 yusaf.dev. All rights reserved.</p>
+        </div>
+        <div class="padding"></div>
+      </footer>
+    </main>
     <!-- ================= COLOR PICKER ================= -->
     <form class="color-picker-form" action="" method="get">
-      <input type="color" name="color" id="colorPicker" value="#ff0000" />
+      <div class="picker">
+        <label for="colorPicker">Primary color</label>
+        <input
+          type="color"
+          name="color"
+          id="primaryColorPicker"
+          value="greenyellow"
+        />
+      </div>
+      <div class="picker">
+        <label for="colorPicker">Accent color</label>
+        <input
+          type="color"
+          name="color"
+          id="accentColorPicker"
+          value="greenyellow"
+        />
+      </div>
     </form>
-
-    <!-- ================= HERO (PARALLAX) ================= -->
-    <section class="hero">
-      <!-- Background layer (moves slower = parallax effect) -->
-      <div class="hero-bg"></div>
-
-      <!-- Main content -->
-      <div class="container hero-content">
-        <h1>Build Better Websites Faster</h1>
-        <p>A clean GSAP-powered boilerplate.</p>
-        <button class="btn accent" id="ctaBtn">Get Started</button>
-      </div>
-
-      <!-- Floating decorative shapes -->
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </section>
-
-    <!-- ================= FEATURES ================= -->
-    <section class="features">
-      <div class="container">
-        <!-- Section heading -->
-        <div class="section-header">
-          <h2>Features</h2>
-          <p>Everything you need to get started.</p>
-        </div>
-
-        <!-- Feature cards -->
-        <div class="feature-grid">
-          <div class="card">
-            <img class="card-image" src="./images/test1.jpg" alt="" />
-            <h3>Fast Setup</h3>
-            <p>Launch projects quickly.</p>
-          </div>
-
-          <div class="card">
-            <img class="card-image" src="./images/test1.jpg" alt="" />
-            <h3>Responsive</h3>
-            <p>Mobile-first design.</p>
-          </div>
-
-          <div class="card">
-            <img class="card-image" src="./images/test1.jpg" alt="" />
-            <h3>Modern UI</h3>
-            <p>Smooth animations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-    <section class="cta">
-      <div class="container">
-        <h2>Ready to build something great?</h2>
-        <p>Start your next project today.</p>
-        <button class="btn accent">Start Now</button>
-      </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="container footer-grid">
-        <!-- LOGO / BRAND -->
-        <div class="footer-brand">
-          <div class="footer-logo">LOGO</div>
-          <p>
-            Building modern, high-performance websites with clean design and
-            smooth interactions.
-          </p>
-        </div>
-
-        <!-- COLUMN 1 -->
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-
-        <!-- COLUMN 2 -->
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Development</a></li>
-            <li><a href="#">SEO</a></li>
-          </ul>
-        </div>
-
-        <!-- COLUMN 3 -->
-        <div class="footer-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <p>© 2026 Your Name. All rights reserved.</p>
-      </div>
-    </footer>
 
     <!-- JS -->
     <script src="script.js"></script>
