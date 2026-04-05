@@ -87,7 +87,10 @@ gsap.from(".section-header", {
 gsap.from(".card", {
     scrollTrigger: {
         trigger: ".feature-grid",
-        start: "top 80%"
+        start: "top 80%",
+        end: "bottom 90%",
+        scrub: true,
+        markers: true
     },
     opacity: 0,
     y: 50,
@@ -152,20 +155,24 @@ gsap.to(".shape-2", {
     }
 });
 
+/*
 // Cards subtle parallax
 gsap.utils.toArray(".card").forEach((card, i) => {
     gsap.to(card, {
-        y: i % 2 === 0 ? 30 : -30,
-        x: i % 2 === 0 ? 15 : -75,
+        // y: i % 2 === 1 ? 30 : -30,
+        // x: i % 2 === 1 ? 15 : -75,
+        opacity: 0.8,
         ease: "none",
         scrollTrigger: {
             trigger: card,
             start: "top 90%",
             end: "bottom 10%",
-            scrub: true
-        }
+            scrub: true,
+            markers: true
+        },
     });
 });
+*/
 
 /* ================= COLOR PICKER ================= */
 const colorPicker = document.getElementById("colorPicker");

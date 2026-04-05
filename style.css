@@ -101,10 +101,7 @@ body {
 
 /* ================= COLOR PICKER ================= */
 .color-picker-form {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+
 }
 
 /* ================= HERO (PARALLAX) ================= */
