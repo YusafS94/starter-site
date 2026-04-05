@@ -93,7 +93,7 @@ gsap.from(".card", {
         markers: true
     },
     opacity: 0,
-    y: 50,
+    x: 50,
     stagger: 0.2
 });
 
