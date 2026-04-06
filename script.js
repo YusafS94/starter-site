@@ -84,18 +84,18 @@ gsap.from(".section-header", {
 });
 
 // Cards stagger
-gsap.from(".card", {
-    scrollTrigger: {
-        trigger: ".feature-grid",
-        start: "top 80%",
-        end: "bottom 90%",
-        scrub: true,
-        markers: true
-    },
-    opacity: 0,
-    x: 50,
-    stagger: 0.2
-});
+// gsap.from(".card", {
+//     scrollTrigger: {
+//         trigger: ".feature-grid",
+//         start: "top 80%",
+//         end: "bottom 90%",
+//         scrub: true,
+//         markers: true
+//     },
+//     opacity: 0,
+//     x: 50,
+//     stagger: 0.2
+// });
 
 // CTA
 gsap.from(".cta", {
@@ -121,39 +121,39 @@ gsap.from(".footer-col, .footer-brand", {
 // ================= PARALLAX =================
 
 // Background moves slower than scroll
-gsap.to(".hero-bg", {
-    y: "20%",
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-    }
-});
+// gsap.to(".hero-bg", {
+//     y: "20%",
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: ".hero",
+//         start: "top top",
+//         end: "bottom top",
+//         scrub: true
+//     }
+// });
 
 // Floating shapes move differently
-gsap.to(".shape-1", {
-    y: 100,
-    x: 50,
-    scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-    }
-});
+// gsap.to(".shape-1", {
+//     y: 100,
+//     x: 50,
+//     scrollTrigger: {
+//         trigger: ".hero",
+//         start: "top top",
+//         end: "bottom top",
+//         scrub: true
+//     }
+// });
 
-gsap.to(".shape-2", {
-    y: -80,
-    x: -40,
-    scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-    }
-});
+// gsap.to(".shape-2", {
+//     y: -80,
+//     x: -40,
+//     scrollTrigger: {
+//         trigger: ".hero",
+//         start: "top top",
+//         end: "bottom top",
+//         scrub: true
+//     }
+// });
 
 /*
 // Cards subtle parallax
