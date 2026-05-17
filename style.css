@@ -156,6 +156,9 @@ img {
   color: var(--text-primary);
   letter-spacing: 1px;
 }
+.logo-img {
+  width: 100px;
+}
 
 /* Desktop Navigation Link Styling */
 .desktop-nav {
