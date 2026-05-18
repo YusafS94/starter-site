@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starter Site | Dark Mode Boilerplate</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
       <div class="container nav-container">
         <div class="logo">
-          <!-- LOGO GOES HERE -->
-          <img class="logo-img" src="./images/logo1.png" alt="Logo" srcset="" />
+          <img
+            class="logo-img logo-dark hidden"
+            src="./images/Logo1.png"
+            alt="Logo"
+          />
+          <img
+            class="logo-img logo-light"
+            src="./images/Logo2.png"
+            alt="Logo"
+          />
         </div>
 
         <nav class="desktop-nav">
@@ -21,6 +30,52 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
+
+        <span
+          id="dm-toggle"
+          role="button"
+          aria-label="Toggle dark mode"
+          style="cursor: pointer"
+        >
+          <svg
+            id="moon"
+            class="hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M12 22c5.523 0 10-4.477 10-10c0-.463-.694-.54-.933-.143a6.5 6.5 0 1 1-8.924-8.924C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10"
+            />
+          </svg>
+          <svg
+            id="sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0"
+            />
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"
+              clip-rule="evenodd"
+            />
+            <path
+              fill="currentColor"
+              d="M4.398 4.398a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.392.393a.75.75 0 0 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0m-1.453 13.748a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m-12.295 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0"
+              opacity=".5"
+            />
+          </svg>
+        </span>
 
         <button
           class="menu-toggle"
@@ -55,12 +110,16 @@
               clean code, and flawless responsive layouts.
             </p>
             <div class="hero-actions">
-              <button class="btn btn-primary">Get Started</button>
-              <button class="btn btn-secondary">Learn More</button>
+              <button class="btn btn-primary">Image 1</button>
+              <button class="btn btn-secondary">Image 2</button>
             </div>
           </div>
           <div class="hero-image-wrapper">
-            <div class="hero-image-placeholder"></div>
+            <img
+              class="hero-image-placeholder"
+              src="./images/pixel_art.png"
+              alt="Hero Image"
+            />
           </div>
         </div>
       </section>
@@ -120,12 +179,15 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <!-- LOGO GOES HERE -->
             <img
-              class="logo-img"
-              src="./images/logo1.png"
+              class="logo-img logo-dark hidden"
+              src="./images/Logo1.png"
               alt="Logo"
-              srcset=""
+            />
+            <img
+              class="logo-img logo-light"
+              src="./images/Logo2.png"
+              alt="Logo"
             />
           </div>
           <p>
